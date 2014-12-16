@@ -44,6 +44,22 @@
 <img src="http://logcat.student.rit.edu/Public%20Share/Servers.png" alt="Servers" width="700" height="250">
 <p> Computationally, the cluster is comprised of a variety of enterprise grade servers from manufacturers like Dell, HP, Intel and SuperMicro.</p>
 
+<h3>
+<a id="current-work" class="anchor" href="#current-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Work</h3>
+
+<p>But we are still not done. Transfer speeds can be improved further if we are willing to use a bit of CPU on the source host.</p>
+
+<p>As you might know, gzip is a sequential single threaded application, but we also have a parallel zip, named rather expressively as “pigz”:</p>
+
+<pre><code># SOURCE:
+> tar -cf - /u02/databases/mydb/data_file-1.dbf | pigz | nc -l 8888
+
+# TARGET:
+> nc <source host> 8888 | pigz -d | tar xf - -C /
+</pre></code>
+
+<p>Pigz is a essentially a gzip, but can use multiple parallel streams to compress/decompress the data. If we replace gzip with pigz, we can achieve fantastical speeds and cut our transfer time again by the factor of ~ 2-10, comparing to scp. </p>
+
 
 <h3>
 <a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h3>
