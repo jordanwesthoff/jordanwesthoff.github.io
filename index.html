@@ -47,10 +47,7 @@
 <h3>
 <a id="current-work" class="anchor" href="#current-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Work</h3>
 
-<p>But we are still not done. Transfer speeds can be improved further if we are willing to use a bit of CPU on the source host.</p>
-
-<p>As you might know, gzip is a sequential single threaded application, but we also have a parallel zip, named rather expressively as “pigz”:</p>
-
+<p>Current work is relevant to faster copying and streaming of files from the headnode to each of the hosts. Current stages posted here. </p>
 <pre><code># SOURCE:
 > tar -cf - /u02/databases/mydb/data_file-1.dbf | pigz | nc -l 8888
 
