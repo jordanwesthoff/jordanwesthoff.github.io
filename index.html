@@ -31,13 +31,13 @@
 <pre><code>The cluster currently employs allows access to:
 -> High-Availability Cores: 54 (+26 Auxiliary Cores)
 -> 384 GB's Available RAM (+128 GB Aux RAM)
--> 84.0 TB Availaable Pool Storage
+-> 84.0 TB Available Pool Storage
 </pre></code>
 
 <h3>
 <a id="introduction-to-the-cluster" class="anchor" href="#introduction-to-the-cluster" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to the Cluster</h3>
 
-<p> This page is a dedicated portal into the current state of the cluster, as well as the current statistics in size and speed, as well as uptime.</p>
+<p> This page is a dedicated portal into the current state of the cluster, as well as the current statistics in size and speed, as well as uptime. Forthcoming graphs will represent a minute by minute window into the cluster but generalized stats are typically more useful since machines come up and down frequently due to the current development environment and this can impact apparent statistics.</p>
 
 <h3>
 <a id="server-breakdown" class="anchor" href="#server-breakdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server Breakdown</h3>
@@ -56,7 +56,7 @@
 > nc <source host> 8888 | pigz -d | tar xf - -C /
 </pre></code>
 
-<p>Pigz is a essentially a gzip, but can use multiple parallel streams to compress/decompress the data. If we replace gzip with pigz, we can achieve fantastical speeds and cut our transfer time again by the factor of ~ 2-10, comparing to scp. </p>
+<p>"Pigz is a essentially a gzip, but can use multiple parallel streams to compress/decompress the data. If we replace gzip with pigz, we can achieve fantastical speeds and cut our transfer time again by the factor of ~ 2-10, comparing to scp." </p>
 
 
 <h3>
