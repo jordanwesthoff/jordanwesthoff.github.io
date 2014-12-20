@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="shortcut icon" href="https://raw.githubusercontent.com/jordanwesthoff/jordanwesthoff.github.io/master/images/cerberus_favicon.ico">
+    <link rel="stylesheet" type="text/css" href="http://jordanwesthoff.github.io/stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="http://jordanwesthoff.github.io/stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="shttp://jordanwesthoff.github.io/tylesheets/print.css" media="print">
+
+    <title>Cerberus Cluster Statistics</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Server Components</h1>
+        <h2>(Still) Hosted via rSync of GitHub Repo (Dynamic Stats)</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/jordanwesthoff/senior_thesis" class="btn btn-github"><span class="icon"></span>View Repo</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+
+        <h3>
+<a id="cluster-stats" class="anchor" href="#cluster-stats" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cluster Statistics.</h3>
+<pre><code>The cluster currently employs a three headed configuration:
+-> Staging Storage Servers
+-> Head Node Server (The Boss Head)
+-> Massive (Yet Unintelligent) Compute Nodes
+</pre></code>
+
+<p>This page outlines the projected timetable to be followed for this project through the end of the Fall Semester, by week. This schedule will be less rigid than the Spring Semester calendar since a good deal of research and implementation and testing have yet to be completed, but significant progress is required and expected as well.</p>
+<hr />
+<h3 id="week-4">Week 4</h3>
+<ul>
+<li>~~Prepare updated presentation material~~ </li>
+<li>~~Do an initial benchmark of the system and each node.~~</li>
+</ul>
+<h3 id="week-5">Week 5</h3>
+<ul>
+<li>~~Memory Testing Week (Can project be run from RAM or SHM Swap)~~</li>
+<li>~~Disk Testing Week (Will drives explode if project is run from local drive storage)~~</li>
+<li>~~Turn information gathered into a good infographic~~
+<img alt="Initial Single vs Multi-Core Benchmarks" src="http://logcat.student.rit.edu/Public%20Share/image%20(3" />.png)
+<img alt="Initial Image Processing Multi-Core Tests (PNG)" src="http://logcat.student.rit.edu/Public%20Share/image%20(1" />.png)</li>
+<li>~~Build a repository of all packages needed for SLURM and other important packages~~</li>
+</ul>
+<h3 id="week-6">Week 6</h3>
+<ul>
+<li>~~Initialize resource managers and task schedulers~~</li>
+<li>~~Slurm~~</li>
+<li>~~Maui + Torque~~</li>
+<li>~~GEARS, OpenPBS, ROCKS, etc~~</li>
+<li>~~Initialize Fortress and benchmark it (HP GL3 series)~~</li>
+<li>~~Disk test Prowler (FreeBSD / FreeNAS)~~</li>
+<li>~~Work on SLURM repository~~</li>
+</ul>
+<h3 id="week-7">Week 7</h3>
+<ul>
+<li>~~Benchmark the system as a whole~~</li>
+<li>~~Start learning C++ as well as research compiling and running C++ code~~</li>
+</ul>
+<h3 id="week-8">Week 8</h3>
+<ul>
+<li>~~Time to begin the paper~~</li>
+<li>~~Cover design~~</li>
+<li>~~Architecture~~</li>
+<li>~~Available benchmark data~~</li>
+</ul>
+<h3 id="week-9">Week 9</h3>
+<ul>
+<li>Working on paper [abstract, preamble, introduction and hardware]</li>
+<li>compiling dc.RAW and open.CV for C++</li>
+<li><a href="http://cimg.sourceforge.net/">cimg</a></li>
+</ul>
+<h3 id="week-10">Week 10</h3>
+<ul>
+<li>~~Convert head node [intruder] from i686 to x86_64~~</li>
+<li>~~Converting to Phoronix Test Suite [PTS]~~</li>
+<li>~~Tinkering with Phoromatic server setup and web 'dashboard' setup~~</li>
+</ul>
+<h3 id="week-11">Week 11</h3>
+<ul>
+<li>More C++</li>
+<li>dpx -&gt; Tiff operations with dc.RAW</li>
+<li>~~Full Pool Stats Update~~
+<img alt="Full Pool Stats" src="http://logcat.student.rit.edu/Public%20Share/servers.png" /></li>
+</ul>
+<h3 id="week-12">Week 12</h3>
+<ul>
+<li>~~Five new intruder nodes acquired~~</li>
+<li>~~Registered and on the network after much stress (thanks RIT RESNET)~~</li>
+<li>~~Cent Initialized, Updated, Provisioned and Benchmarked~~</li>
+<li>Phoromatic server running and setup</li>
+<li>Image processing setup and custom dc.RAW testmarking built</li>
+<li>~~Must convert Crawler to x86_64 arch for better RAM and CPU utilization.~~</li>
+<li>~~32-bit and 64-bit performance comparisons~~
+<img alt="Full Pool Stats - MCluster Included" src="http://logcat.student.rit.edu/Public%20Share/FullCluster.png" />
+<img alt="32vs64 [Headnode, Compute, Commodity]" src="http://logcat.student.rit.edu/Public%20Share/32bit64bit.png" />
+<img alt="MicroCluster Comparison" src="http://logcat.student.rit.edu/Public%20Share/MicroCluster.png" /></li>
+</ul>
+<h3 id="week-13">Week 13</h3>
+<p><img alt="Ansible Square Logo" src="https://raw.githubusercontent.com/jordanwesthoff/jordanwesthoff.github.io/master/images/ansible.png" />
+- Implementation and Testing of Ansible SSH provisioning 
+- Ansible testing and playbook demo'ing
+- Kickstart and Ansible playbooks developed and spread across all cluster machines. </p>
+<h3 id="week-14">Week 14</h3>
+<p><img alt="Zabbix Logo" src="https://raw.githubusercontent.com/jordanwesthoff/jordanwesthoff.github.io/master/images/zabbix.png" />
+- Implementation of monitoring and testing software to look over the entire cluster. Phoronix, Ganglia and Zabbix were tested. Ganglia and Phoronix were removed and determined to be deprecated - Zabbix wins. 
+- Write zabbix install, maintain and update scripts for shell execution and Ansible playbook provisioning
+- Configure Zabbix and all required templates
+- Asset management
+- Benchmarking to ensure data fetch accuracy</p>
+<h3 id="week-15">Week 15</h3>
+<ul>
+<li>More C++</li>
+<li>Convert Shell scripts and messy init scripts to Ansible YAML</li>
+</ul>
+<h3 id="week-16">Week 16</h3>
+<ul>
+<li>Power management</li>
+<li>Lots of Ansible scripting</li>
+<li>Improved Zabbix monitoring</li>
+<li>Generated custom screens and graphs for full cluster</li>
+<li>Found the Zabbkit iOS app, yay for mobile monitoring</li>
+</ul>
+<h3 id="week-17">Week 17</h3>
+<ul>
+<li>Finals week</li>
+<li>Didn't do any cluster work</li>
+<li>Cried</li>
+<li>Mostly kidding.</li>
+</ul>
+
+
+<br>
+<br>
+<br>
+<h3>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h3>
+<p>Project and code by <a href="https://github.com/jordanwesthoff" class="user-mention">@jordanwesthoff</a>. Click on the profile for more information. RIT 2015. Senior thesis content. </p>
+
+
+
+<pre><code>"You are not like Cerberus, three gentlemen at once, are you?"
+
+ - Richard Brinsley Sheridan: Act IV, sc. ii.
+</pre></code>
+
+
+      </section>
+    </div>
+
+
+  </body>
+</html>
