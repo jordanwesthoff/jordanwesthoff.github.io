@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="shortcut icon" href="http://sstatic.net/stackoverflow/img/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <title>Cerberus Cluster Statistics</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>Cerberus Cluster Statistics</h1>
+        <h2>Hosted via rSync of GitHub Repo (Dynamic Stats)</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/jordanwesthoff/senior_thesis" class="btn btn-github"><span class="icon"></span>View Repo</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+
+
+<img src="https://raw.githubusercontent.com/jordanwesthoff/jordanwesthoff.github.io/master/images/cerberus.jpg" alt="Cerberus" width="700" height="350">
+
+        <h3>
+<a id="cluster-stats" class="anchor" href="#cluster-stats" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cluster Statistics.</h3>
+<pre><code>The cluster currently employs allows access to:
+-> High-Availability Cores: 54 (+26 Auxiliary Cores)
+-> 384 GB's Available RAM (+128 GB Aux RAM)
+-> 84.0 TB Available Pool Storage
+</pre></code>
+
+<h3>
+<a id="introduction-to-the-cluster" class="anchor" href="#introduction-to-the-cluster" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction to the Cluster</h3>
+
+<p> This page is a dedicated portal into the current state of the cluster, as well as the current statistics in size and speed, as well as uptime. Forthcoming graphs will represent a minute by minute window into the cluster but generalized stats are typically more useful since machines come up and down frequently due to the current development environment and this can impact apparent statistics.</p>
+
+<p> The cluster is built using all free and open source tools. CentOS is used as the OS, Ansible for provisioning, Zabbix for monitoring and SLURM for cluster operations. Current usable dependencies are PTS, dc.RAW, cimg and other packages as well. </p>
+
+
+<h3>
+<a id="server-breakdown" class="anchor" href="#server-breakdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server Breakdown</h3>
+
+<img src="http://logcat.student.rit.edu/Public%20Share/Servers.png" alt="Servers" width="700" height="250">
+<p> Computationally, the cluster is comprised of a variety of enterprise grade servers from manufacturers like Dell, HP, Intel Development and SuperMicro.</p>
+
+<h3>
+<a id="current-work" class="anchor" href="#current-work" aria-hidden="true"><span class="octicon octicon-link"></span></a>Current Work</h3>
+
+<p>Current work is relevant to faster copying and streaming of files from the headnode to each of the hosts. Current stages posted here. Current investigation is parallel compression, streaming and decompression. </p>
+
+<p> Current investigated software includes NetCat (NC) as well as BBCP, Pigz and PopeViewer (PV) </p>
+
+<pre><code># SOURCE:
+> tar -cf - /u02/databases/mydb/data_file-1.dbf | pigz | nc -l 8888
+
+# TARGET:
+> nc <source host> 8888 | pigz -d | tar xf - -C /
+</pre></code>
+
+<p>"Pigz is a essentially a gzip, but can use multiple parallel streams to compress/decompress the data. If we replace gzip with pigz, we can achieve fantastical speeds and cut our transfer time again by the factor of ~ 2-10, comparing to scp." </p>
+
+
+<h3>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h3>
+<p>Project and code by <a href="https://github.com/jordanwesthoff" class="user-mention">@jordanwesthoff</a>. Click on the profile for more information. RIT 2015. Senior thesis content. </p>
+
+
+
+<br>
+<br>
+<br>
+<pre><code>"You are not like Cerberus, three gentlemen at once, are you?"
+
+ - Richard Brinsley Sheridan: Act IV, sc. ii.
+</pre></code>
+
+
+      </section>
+    </div>
+
+
+  </body>
+</html>
