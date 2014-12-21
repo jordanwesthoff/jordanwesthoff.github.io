@@ -53,7 +53,7 @@
 
 <p> The cluster is built using all free and open source tools. <a href="http://www.centos.org/">CentOS</a> is used as the OS, <a href="http://www.ansible.com/">Ansible</a> for provisioning, <a href="http://www.zabbix.com/">Zabbix</a> for monitoring and <a href="http://slurm.schedmd.com/">SLURM</a> for cluster operations. Current usable dependencies are PTS, dc.RAW, cimg and other packages as well. </p>
 
-<p> More information can be found from a variety of sources. Project timelines can be found here: <a href="http://intruder.student.rit.edu/cerberus/fall_timeline">Fall</a> and <a href="http://intruder.student.rit.edu/cerberus/spring_timeline">Spring.</a> There is a lot of method information on the <a href="https://github.com/jordanwesthoff/senior_thesis/wiki">Wiki Page</a>
+<p> More information can be found from a variety of sources. Project timelines can be found here: <a href="http://intruder.student.rit.edu/cerberus/fall_timeline">Fall</a> and <a href="http://intruder.student.rit.edu/cerberus/spring_timeline">Spring.</a> There is a lot of method information on the <a href="https://github.com/jordanwesthoff/senior_thesis/wiki">Wiki Page.</a>
 
 <h3>
 <a id="server-breakdown" class="anchor" href="#server-breakdown" aria-hidden="true"><span class="octicon octicon-link"></span></a>Server Breakdown</h3>
@@ -65,7 +65,7 @@
 
 <p>Current work is relevant to faster copying and streaming of files from the headnode to each of the hosts. Current stages posted here. Current investigation is parallel compression, streaming and decompression. </p>
 
-<p> Current investigated software includes NetCat (NC) as well as BBCP, Pigz and PopeViewer (PV) </p>
+<p> Current investigated software includes NetCat (NC) as well as BBCP, Pigz and PopeViewer (PV). This allows node to node operations to operate faster since the information exchanged between them will take less time to copy. </p>
 
 <pre><code># SOURCE:
 > tar -cf - /u02/databases/mydb/data_file-1.dbf | pigz | nc -l 8888
