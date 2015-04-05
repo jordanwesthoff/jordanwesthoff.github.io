@@ -1,1 +1,0 @@
-@JordanWesthoff, RIT 2014
